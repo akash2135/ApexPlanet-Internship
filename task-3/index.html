@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 3 - Advanced Styling and JavaScript</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar">
+        <h2 class="logo">ApexPlanet</h2>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#quiz">Quiz</a></li>
+          <li><a href="#carousel">Carousel</a></li>
+          <li><a href="#api">Weather</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <h1>Advanced Styling and JavaScript</h1>
+      <p>
+        Responsive Design, Interactive Quiz, Image Carousel and API Fetch
+        Project
+      </p>
+
+      <button onclick="showMessage()">Click Me</button>
+    </section>
+
+    <!-- Advanced Quiz Section -->
+
+    <section class="quiz-section" id="quiz">
+      <h2>Programming Quiz Dashboard</h2>
+
+      <!-- Category Buttons -->
+
+      <div class="category-buttons">
+        <button onclick="loadQuiz('html')">HTML Quiz</button>
+
+        <button onclick="loadQuiz('css')">CSS Quiz</button>
+
+        <button onclick="loadQuiz('js')">JavaScript Quiz</button>
+      </div>
+
+      <!-- Quiz Box -->
+
+      <div class="quiz-box">
+        <!-- <h3 id="quiz-title">Select a Quiz Category</h3> -->
+        <h3 id="quiz-title"></h3>
+
+        <h2 id="question-number"></h2>
+
+        <h3 id="question"></h3>
+
+        <div class="options">
+          <button class="option" id="option1"></button>
+
+          <button class="option" id="option2"></button>
+
+          <button class="option" id="option3"></button>
+
+          <button class="option" id="option4"></button>
+        </div>
+
+        <!-- Navigation Buttons -->
+
+        <div class="quiz-navigation">
+          <button onclick="previousQuestion()">Go To Previous Question</button>
+
+          <button onclick="nextQuestion()">Go To Next Question</button>
+        </div>
+
+        <!-- Score Board -->
+
+        <div class="score-board">
+          <h3>Quiz Result</h3>
+
+          <p>
+            ✅ Correct Answers:
+            <span id="correct-score">0</span>
+          </p>
+
+          <p>
+            ❌ Wrong Answers:
+            <span id="wrong-score">0</span>
+          </p>
+
+          <p>
+            🎯 Total Score:
+            <span id="total-score">0</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Carousel -->
+    <section class="carousel-section" id="carousel">
+      <h2>Image Carousel</h2>
+
+      <div class="carousel">
+        <img
+          id="slider"
+          src="https://picsum.photos/id/1015/700/400"
+          alt="slider image"
+        />
+
+        <div class="buttons">
+          <button onclick="prevImage()">Previous</button>
+          <button onclick="nextImage()">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- API Section -->
+    <section class="api-section" id="api">
+      <h2>Fetch Data From API</h2>
+
+      <div class="weather-box">
+        <input type="text" id="city" placeholder="Enter city name" />
+
+        <button onclick="getWeather()">Get Weather</button>
+
+        <div id="weatherResult"></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Created by Aakash | Internship Task-3 | ApexPlanet Software Pvt. Ltd</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
