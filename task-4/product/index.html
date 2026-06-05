@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Product Listing App</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🛒 Product Listing Page</h1>
+
+    <div class="controls">
+
+        <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="Laptop">Laptop</option>
+            <option value="Phone">Phone</option>
+            <option value="Headphone">Headphone</option>
+            <option value="Watch">Watch</option>
+            <option value="Tablet">Tablet</option>
+        </select>
+
+        <select id="sortOption">
+            <option value="default">Sort By</option>
+            <option value="low">Price Low → High</option>
+            <option value="high">Price High → Low</option>
+            <option value="rating">Top Rated</option>
+        </select>
+
+    </div>
+
+    <!-- Product Cards yaha render honge -->
+    <div id="productContainer"></div>
+
+</div>
+
+<!-- Product Details Popup -->
+
+<div class="modal" id="productModal">
+
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <img
+        id="modalImage"
+        alt="Product Image">
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDesc"></p>
+
+        <h3 id="modalPrice"></h3>
+
+        <div id="modalRating"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

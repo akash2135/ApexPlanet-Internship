@@ -1,0 +1,196 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:linear-gradient(
+135deg,
+#0f172a,
+#1e293b,
+#334155);
+
+min-height:100vh;
+padding:30px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+h1{
+text-align:center;
+color:#00e5ff;
+margin-bottom:30px;
+}
+
+.controls{
+display:flex;
+gap:20px;
+justify-content:center;
+margin-bottom:30px;
+flex-wrap:wrap;
+}
+
+select{
+padding:12px 15px;
+border:none;
+border-radius:10px;
+font-size:15px;
+outline:none;
+cursor:pointer;
+}
+
+#productContainer{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+}
+
+.card{
+
+background:
+rgba(255,255,255,0.08);
+
+backdrop-filter:blur(15px);
+
+padding:20px;
+
+border-radius:15px;
+
+color:white;
+
+transition:.3s;
+
+border:1px solid rgba(255,255,255,.1);
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+0 10px 25px rgba(0,229,255,.25);
+
+}
+
+.card img{
+
+width:100%;
+
+height:180px;
+
+object-fit:cover;
+
+border-radius:10px;
+
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.price{
+color:#00e5ff;
+font-size:20px;
+font-weight:bold;
+}
+
+.rating{
+color:gold;
+margin:10px 0;
+}
+
+.btn{
+
+display:inline-block;
+
+margin-top:10px;
+
+padding:10px 18px;
+
+background:#00e5ff;
+
+color:black;
+
+text-decoration:none;
+
+border-radius:8px;
+
+font-weight:600;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.8);
+    z-index:1000;
+}
+
+.modal-content{
+
+    background:#1e293b;
+
+    width:90%;
+    max-width:500px;
+
+    margin:50px auto;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    color:white;
+
+    position:relative;
+}
+
+.modal-content img{
+
+    width:100%;
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    margin-bottom:15px;
+}
+
+.close{
+
+    position:absolute;
+
+    right:20px;
+    top:10px;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    color:#00e5ff;
+}
+
+#modalPrice{
+    color:#00e5ff;
+    margin-top:15px;
+}
+
+#modalRating{
+    color:gold;
+    margin-top:10px;
+}
